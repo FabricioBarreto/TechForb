@@ -4,11 +4,12 @@ import com.techforb.Techforb.dto.request.LoginRequest;
 import com.techforb.Techforb.dto.request.SignUpRequest;
 import com.techforb.Techforb.dto.response.JwtAuthenticationResponse;
 import com.techforb.Techforb.exceptions.EmailAlreadyExistsException;
-import com.techforb.Techforb.exceptions.EmailNotExist;
+import com.techforb.Techforb.exceptions.NumberDocumentAlreadyExistException;
+import com.techforb.Techforb.exceptions.ResourceNotFoundException;
 import com.techforb.Techforb.models.Role;
-import com.techforb.Techforb.models.TypeDocumentEnum;
 import com.techforb.Techforb.models.User;
 import com.techforb.Techforb.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
@@ -31,6 +33,10 @@ public class AuthenticationService {
 
         if (userRepository.existsByEmail(request.getEmail())){
             throw new EmailAlreadyExistsException();
+        }
+
+        if (userRepository.existsByNumberDocument(request.getNumberDocument())){
+            throw new NumberDocumentAlreadyExistException();
         }
 
         var user = User
@@ -50,14 +56,17 @@ public class AuthenticationService {
 
 
     public JwtAuthenticationResponse login(LoginRequest request) {
-
-        if (!userRepository.existsByEmail(request.getEmail())){
-            throw new EmailNotExist();
-        }
-
+         User userValid = userRepository.findByNumberDocument(request.getNumberDocument())
+                 .orElseThrow(()->
+                         new ResourceNotFoundException(String.format("User with number document %s not found",
+                         request.getNumberDocument())));
+         if (!(String.valueOf(userValid.getTypeDocument()) == String.valueOf(request.getTypeDocument()))){
+             throw new ResourceNotFoundException(String.format("User with type document %s  not found",
+                     request.getTypeDocument()));
+         }
         authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
-        var user = userRepository.findByEmail(request.getEmail())
+                new UsernamePasswordAuthenticationToken(userValid.getEmail(), request.getPassword()));
+        var user = userRepository.findByEmail(userValid.getEmail())
                 .orElseThrow(() -> new IllegalArgumentException("Invalid email or password."));
         var jwt = jwtService.generateToken(user);
         return JwtAuthenticationResponse.builder().token(jwt).build();

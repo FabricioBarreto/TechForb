@@ -1,0 +1,6 @@
+amazonProperties:
+  endpointUrl: https://533969910684.signin.aws.amazon.com/console
+  accessKey: AKIAXYUYWHOODB42FBU7
+  secretKey: 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
+  bucketName: s3-techforb
+  region: us-east-2

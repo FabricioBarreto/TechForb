@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -18,7 +17,7 @@ export default function Signup() {
     password: "",
   });
 
-  const handleTypeDocumentChange = (e) => {
+  const handleTypeDocumentChange = (e: any) => {
     setUser({ ...user, typeDocument: e.target.value });
   };
 
@@ -36,7 +35,7 @@ export default function Signup() {
 
       // Redirigir a home
       router.push("/");
-    } catch (error) {
+    } catch (error: any) {
       // Mostrar error
       toast.error(error.message);
     }

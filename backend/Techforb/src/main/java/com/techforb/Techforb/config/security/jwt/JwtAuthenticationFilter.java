@@ -4,7 +4,6 @@ package com.techforb.Techforb.config.security.jwt;
 import java.io.IOException;
 
 import com.techforb.Techforb.service.JwtService;
-import com.techforb.Techforb.service.impl.JwtServiceImpl;
 import com.techforb.Techforb.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

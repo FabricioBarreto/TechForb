@@ -22,16 +22,6 @@ public class Transaction {
 
     private Double amount;
 
-    private Card cardSender;
-
-    private Card cardReceiver;
-
     private Date dateOfTransaction;
 
-    public void CreateTransaction(Card cardSender, Card cardReceiver){
-        this.cardSender = cardSender;
-        this.cardReceiver = cardReceiver;
-        Transaction.builder().build().cardSender(cardSender)
-        cardSender.getTransactions().add(Transaction.builder().build());
-    }
 }

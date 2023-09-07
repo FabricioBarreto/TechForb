@@ -16,8 +16,6 @@ public interface UserService {
 
     ResponseEntity<UserResponseDTO> updateUserById(Long id, UserRequestDTO request);
 
-    void uploadProfilePhoto(String email, MultipartFile file)throws Exception;
-
     void deleteUser(Long id);
 
     User createUser(User newUser);

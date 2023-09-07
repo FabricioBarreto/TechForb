@@ -4,9 +4,7 @@ import com.techforb.Techforb.dto.request.LoginRequest;
 import com.techforb.Techforb.dto.request.SignUpRequest;
 import com.techforb.Techforb.dto.response.JwtAuthenticationResponse;
 import com.techforb.Techforb.exceptions.EmailException;
-import com.techforb.Techforb.exceptions.NumberDocumentAlreadyExistException;
 import com.techforb.Techforb.exceptions.ResourceNotFoundException;
-import com.techforb.Techforb.models.Card;
 import com.techforb.Techforb.models.Role;
 import com.techforb.Techforb.models.User;
 import com.techforb.Techforb.repository.UserRepository;
@@ -15,8 +13,6 @@ import com.techforb.Techforb.service.CardService;
 import com.techforb.Techforb.service.JwtService;
 import com.techforb.Techforb.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

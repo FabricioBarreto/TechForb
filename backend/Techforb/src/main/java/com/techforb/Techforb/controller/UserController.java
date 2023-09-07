@@ -1,6 +1,5 @@
 package com.techforb.Techforb.controller;
 
-import com.techforb.Techforb.config.amazon3.service.IAWSClientService;
 import com.techforb.Techforb.config.security.jwt.JwtAuthenticationFilter;
 import com.techforb.Techforb.dto.request.LoginRequest;
 import com.techforb.Techforb.dto.request.SignUpRequest;
@@ -37,9 +36,6 @@ public class UserController {
     @Autowired
     private JwtAuthenticationFilter jwtFilter;
 
-    @Autowired
-    private IAWSClientService iawsClientService;
-
     @PostMapping("/signup")
     public JwtAuthenticationResponse signup(@Valid @RequestBody SignUpRequest request) {
         return authenticationService.signup(request);
@@ -64,23 +60,6 @@ public class UserController {
     public ResponseEntity<UserResponseDTO> getUserByEmail(@PathVariable @PositiveOrZero String email){
         return userService.getUserByEmail(email);
     }
-
-    @PostMapping("/upload/{email}")
-    public ResponseEntity<String> uploadProfilePhoto(@PathVariable String email,
-                                                     @RequestParam("file") MultipartFile file) {
-        try {
-            iawsClientService.uploadFile(file);
-            userService.uploadProfilePhoto(email,file);
-            return ResponseEntity.ok("Imagen subida con éxito");
-        } catch (IOException e) {
-            e.printStackTrace();
-            return ResponseEntity.badRequest().body("Error al subir la imagen");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
 
     @PutMapping("user/update/{id}")
     public ResponseEntity<UserResponseDTO> updateUser(@Valid @PathVariable Long id,

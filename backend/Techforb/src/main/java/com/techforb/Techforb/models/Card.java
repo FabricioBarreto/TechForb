@@ -29,8 +29,4 @@ public class Card {
     @ManyToOne(fetch = FetchType.LAZY)
     private User owner;
 
-    private List<Transaction> transactions = new ArrayList<>();
-
-
-
 }

@@ -1,4 +1,4 @@
-package com.techforb.Techforb.config.security;
+package com.Techforb.Techforb.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

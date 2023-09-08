@@ -1,8 +1,8 @@
-package com.techforb.Techforb.service;
+package com.Techforb.Techforb.service;
 
-import com.techforb.Techforb.dto.request.LoginRequest;
-import com.techforb.Techforb.dto.request.SignUpRequest;
-import com.techforb.Techforb.dto.response.JwtAuthenticationResponse;
+import com.Techforb.Techforb.dto.request.LoginRequest;
+import com.Techforb.Techforb.dto.request.SignUpRequest;
+import com.Techforb.Techforb.dto.response.JwtAuthenticationResponse;
 
 public interface AuthenticationService {
 

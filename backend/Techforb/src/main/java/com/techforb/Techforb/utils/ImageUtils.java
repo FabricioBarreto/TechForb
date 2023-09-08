@@ -1,9 +1,8 @@
-package com.techforb.Techforb.utils;
-
-import org.springframework.stereotype.Component;
-import org.springframework.web.multipart.MultipartFile;
+package com.Techforb.Techforb.utils;
 
 import lombok.Data;
+import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 @Data
 @Component

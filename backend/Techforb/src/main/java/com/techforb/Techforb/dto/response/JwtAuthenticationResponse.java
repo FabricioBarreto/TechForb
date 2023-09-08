@@ -1,4 +1,4 @@
-package com.techforb.Techforb.dto.response;
+package com.Techforb.Techforb.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

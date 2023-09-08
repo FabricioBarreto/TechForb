@@ -1,15 +1,14 @@
-package com.techforb.Techforb.controller;
+package com.Techforb.Techforb.controller;
 
 
-import com.techforb.Techforb.dto.response.MenuResponse;
-import com.techforb.Techforb.repository.MenuRepository;
-import com.techforb.Techforb.service.MenuService;
+
+import com.Techforb.Techforb.dto.response.MenuResponse;
+import com.Techforb.Techforb.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.techforb.Techforb.models.Menu;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:3000")

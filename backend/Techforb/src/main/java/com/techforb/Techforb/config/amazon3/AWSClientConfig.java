@@ -1,4 +1,4 @@
-package com.techforb.Techforb.config.amazon3;
+package com.Techforb.Techforb.config.amazon3;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;

@@ -1,7 +1,7 @@
-package com.techforb.Techforb.mapper;
+package com.Techforb.Techforb.mapper;
 
-import com.techforb.Techforb.dto.response.MenuResponse;
-import com.techforb.Techforb.models.Menu;
+import com.Techforb.Techforb.dto.response.MenuResponse;
+import com.Techforb.Techforb.models.Menu;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

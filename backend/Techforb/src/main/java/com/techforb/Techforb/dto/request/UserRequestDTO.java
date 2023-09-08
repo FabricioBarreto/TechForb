@@ -1,6 +1,6 @@
-package com.techforb.Techforb.dto.request;
+package com.Techforb.Techforb.dto.request;
 
-import com.techforb.Techforb.models.TypeDocumentEnum;
+import com.Techforb.Techforb.models.TypeDocumentEnum;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.techforb.Techforb.exceptions;
+package com.Techforb.Techforb.exceptions;
 
 public class NumberDocumentAlreadyExistException extends RuntimeException {
 

@@ -1,17 +1,16 @@
-package com.techforb.Techforb.service.impl;
+package com.Techforb.Techforb.service.impl;
 
-import com.techforb.Techforb.dto.request.TransactionRequest;
-import com.techforb.Techforb.dto.response.CardResponse;
-import com.techforb.Techforb.dto.response.TransactionResponse;
-import com.techforb.Techforb.exceptions.CardException;
-import com.techforb.Techforb.exceptions.EmailException;
-import com.techforb.Techforb.exceptions.ResourceNotFoundException;
-import com.techforb.Techforb.mapper.CardMapper;
-import com.techforb.Techforb.models.Card;
-import com.techforb.Techforb.models.User;
-import com.techforb.Techforb.repository.CardRepository;
-import com.techforb.Techforb.repository.UserRepository;
-import com.techforb.Techforb.service.CardService;
+import com.Techforb.Techforb.dto.request.TransactionRequest;
+import com.Techforb.Techforb.dto.response.CardResponse;
+import com.Techforb.Techforb.dto.response.TransactionResponse;
+import com.Techforb.Techforb.exceptions.CardException;
+import com.Techforb.Techforb.exceptions.EmailException;
+import com.Techforb.Techforb.mapper.CardMapper;
+import com.Techforb.Techforb.models.Card;
+import com.Techforb.Techforb.models.User;
+import com.Techforb.Techforb.repository.CardRepository;
+import com.Techforb.Techforb.repository.UserRepository;
+import com.Techforb.Techforb.service.CardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +18,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 @Service
 public class CardServiceImpl implements CardService {
@@ -104,7 +102,7 @@ public class CardServiceImpl implements CardService {
         cardRepository.save(senderCard);
         cardRepository.save(cardReceiver);
 
-        return new TransactionResponse(true, "Transaction successes!");
+        return new TransactionResponse();
     }
 
     @Override

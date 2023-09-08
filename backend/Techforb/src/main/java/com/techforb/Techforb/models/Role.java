@@ -1,4 +1,4 @@
-package com.techforb.Techforb.models;
+package com.Techforb.Techforb.models;
 
 public enum Role {
 

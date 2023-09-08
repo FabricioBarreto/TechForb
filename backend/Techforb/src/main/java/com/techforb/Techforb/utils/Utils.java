@@ -1,4 +1,4 @@
-package com.techforb.Techforb.utils;
+package com.Techforb.Techforb.utils;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

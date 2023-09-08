@@ -1,4 +1,4 @@
-package com.techforb.Techforb.config.amazon3.service;
+package com.Techforb.Techforb.config.amazon3.service;
 
 import org.springframework.web.multipart.MultipartFile;
 

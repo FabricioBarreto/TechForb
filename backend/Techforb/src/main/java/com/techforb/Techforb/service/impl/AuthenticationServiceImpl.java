@@ -1,25 +1,23 @@
-package com.techforb.Techforb.service.impl;
+package com.Techforb.Techforb.service.impl;
 
-import com.techforb.Techforb.dto.request.LoginRequest;
-import com.techforb.Techforb.dto.request.SignUpRequest;
-import com.techforb.Techforb.dto.response.JwtAuthenticationResponse;
-import com.techforb.Techforb.exceptions.EmailException;
-import com.techforb.Techforb.exceptions.ResourceNotFoundException;
-import com.techforb.Techforb.models.Role;
-import com.techforb.Techforb.models.User;
-import com.techforb.Techforb.repository.UserRepository;
-import com.techforb.Techforb.service.AuthenticationService;
-import com.techforb.Techforb.service.CardService;
-import com.techforb.Techforb.service.JwtService;
-import com.techforb.Techforb.service.UserService;
+import com.Techforb.Techforb.dto.request.LoginRequest;
+import com.Techforb.Techforb.dto.request.SignUpRequest;
+import com.Techforb.Techforb.dto.response.JwtAuthenticationResponse;
+import com.Techforb.Techforb.exceptions.EmailException;
+import com.Techforb.Techforb.exceptions.ResourceNotFoundException;
+import com.Techforb.Techforb.models.Role;
+import com.Techforb.Techforb.models.User;
+import com.Techforb.Techforb.repository.UserRepository;
+import com.Techforb.Techforb.service.AuthenticationService;
+import com.Techforb.Techforb.service.CardService;
+import com.Techforb.Techforb.service.JwtService;
+import com.Techforb.Techforb.service.UserService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import lombok.RequiredArgsConstructor;
 
 
 @Slf4j
@@ -32,7 +30,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
-    private final CardService cardService;
 
     @Override
     public JwtAuthenticationResponse signup(SignUpRequest request) {

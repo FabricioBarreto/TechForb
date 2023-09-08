@@ -1,6 +1,6 @@
-package com.techforb.Techforb.repository;
+package com.Techforb.Techforb.repository;
 
-import com.techforb.Techforb.models.Menu;
+import com.Techforb.Techforb.models.Menu;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

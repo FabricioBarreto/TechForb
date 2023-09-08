@@ -1,10 +1,10 @@
-package com.techforb.Techforb.models;
+package com.Techforb.Techforb.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.*;
+import java.util.Date;
 
 @Data
 @Builder
@@ -21,12 +21,14 @@ public class Card {
 
     private Double amount;
 
+    @Temporal(TemporalType.DATE)
     private Date dateOfExp;
 
     private Boolean status;
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id")
     private User owner;
 
 }

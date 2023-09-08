@@ -1,6 +1,4 @@
-package com.techforb.Techforb.models;
-
-import lombok.Data;
+package com.Techforb.Techforb.models;
 
 public enum TypeDocumentEnum {
 

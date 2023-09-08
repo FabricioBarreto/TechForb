@@ -1,16 +1,11 @@
-package com.techforb.Techforb.utils;
-
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.Base64;
-
-import org.springframework.web.multipart.MultipartFile;
+package com.Techforb.Techforb.utils;
 
 import lombok.Data;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 
 @Data
 public class Base64ToMultipartFile implements MultipartFile {

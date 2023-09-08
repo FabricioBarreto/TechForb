@@ -1,11 +1,10 @@
-package com.techforb.Techforb.models;
+package com.Techforb.Techforb.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
-
 import java.util.Date;
-import java.util.UUID;
 
 @Data
 @Builder

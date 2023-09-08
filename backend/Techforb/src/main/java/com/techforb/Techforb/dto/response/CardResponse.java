@@ -1,7 +1,5 @@
-package com.techforb.Techforb.dto.response;
+package com.Techforb.Techforb.dto.response;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.techforb.Techforb.models.User;
 import lombok.Data;
 
 import java.util.Date;

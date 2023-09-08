@@ -1,18 +1,15 @@
-package com.techforb.Techforb.config.security;
+package com.Techforb.Techforb.config.security;
 
 
-import com.techforb.Techforb.models.Menu;
-import com.techforb.Techforb.models.Role;
-import com.techforb.Techforb.models.TypeDocumentEnum;
-import com.techforb.Techforb.models.User;
-import com.techforb.Techforb.repository.MenuRepository;
-import com.techforb.Techforb.repository.UserRepository;
-import com.techforb.Techforb.service.CardService;
-import com.techforb.Techforb.service.MenuService;
-import com.techforb.Techforb.service.UserService;
+import com.Techforb.Techforb.models.Menu;
+import com.Techforb.Techforb.models.Role;
+import com.Techforb.Techforb.models.TypeDocumentEnum;
+import com.Techforb.Techforb.models.User;
+import com.Techforb.Techforb.repository.MenuRepository;
+import com.Techforb.Techforb.repository.UserRepository;
+import com.Techforb.Techforb.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;

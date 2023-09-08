@@ -1,6 +1,6 @@
-package com.techforb.Techforb.dto.response;
+package com.Techforb.Techforb.dto.response;
 
-import com.techforb.Techforb.models.TypeDocumentEnum;
+import com.Techforb.Techforb.models.TypeDocumentEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,6 +17,8 @@ public class UserResponseDTO {
     private String email;
 
     private TypeDocumentEnum typeDocument;
+
+    private URL imageUrl;
 
     private String numberDocument;
 

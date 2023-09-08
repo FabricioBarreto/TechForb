@@ -1,8 +1,8 @@
-package com.techforb.Techforb.service;
+package com.Techforb.Techforb.service;
 
-import com.techforb.Techforb.dto.request.UserRequestDTO;
-import com.techforb.Techforb.dto.response.UserResponseDTO;
-import com.techforb.Techforb.models.User;
+import com.Techforb.Techforb.dto.request.UserRequestDTO;
+import com.Techforb.Techforb.dto.response.UserResponseDTO;
+import com.Techforb.Techforb.models.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.multipart.MultipartFile;
@@ -15,6 +15,8 @@ public interface UserService {
     ResponseEntity<UserResponseDTO> getUserByEmail(String email);
 
     ResponseEntity<UserResponseDTO> updateUserById(Long id, UserRequestDTO request);
+
+    void uploadProfilePhoto(String email, MultipartFile file)throws Exception;
 
     void deleteUser(Long id);
 

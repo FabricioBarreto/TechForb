@@ -8,6 +8,8 @@
   left: 0;
   top: 0;
   display: block;
+  z-index: 1000;
+  /* transition: margin-left 3s ease; */
 }
 
 .sidebarLi {
@@ -18,7 +20,6 @@
 .mainContent {
   margin-left: 250px;
   padding: 20px;
-  transition: margin-left 0.3s ease;
 }
 
 .btnSidebar {
@@ -28,8 +29,8 @@
 }
 
 .toggleSidebar {
-  transform: translate(0) !important;
-  transition: 1s !important;
+  transform: translate(0);
+  transition: 1s;
 }
 
 @media (max-width: 970px) {

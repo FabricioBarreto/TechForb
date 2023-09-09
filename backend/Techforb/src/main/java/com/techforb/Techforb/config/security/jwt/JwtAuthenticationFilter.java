@@ -1,8 +1,8 @@
-package com.Techforb.Techforb.config.security.jwt;
+package com.techforb.Techforb.config.security.jwt;
 
 
-import com.Techforb.Techforb.service.JwtService;
-import com.Techforb.Techforb.service.UserService;
+import com.techforb.Techforb.service.JwtService;
+import com.techforb.Techforb.service.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

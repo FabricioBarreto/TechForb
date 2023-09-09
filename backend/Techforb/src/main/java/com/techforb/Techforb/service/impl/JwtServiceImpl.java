@@ -1,6 +1,6 @@
-package com.Techforb.Techforb.service.impl;
+package com.techforb.Techforb.service.impl;
 
-import com.Techforb.Techforb.service.JwtService;
+import com.techforb.Techforb.service.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

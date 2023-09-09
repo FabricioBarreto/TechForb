@@ -1,4 +1,4 @@
-package com.Techforb.Techforb.exceptions;
+package com.techforb.Techforb.exceptions;
 
 import lombok.Getter;
 import lombok.Setter;

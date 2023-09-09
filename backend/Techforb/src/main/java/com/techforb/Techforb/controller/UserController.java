@@ -1,15 +1,13 @@
-package com.Techforb.Techforb.controller;
+package com.techforb.Techforb.controller;
 
-import com.Techforb.Techforb.config.amazon3.service.IAWSClientService;
-import com.Techforb.Techforb.config.security.jwt.JwtAuthenticationFilter;
-import com.Techforb.Techforb.dto.request.LoginRequest;
-import com.Techforb.Techforb.dto.request.SignUpRequest;
-import com.Techforb.Techforb.dto.request.UserRequestDTO;
-import com.Techforb.Techforb.dto.response.JwtAuthenticationResponse;
-import com.Techforb.Techforb.dto.response.UserResponseDTO;
-import com.Techforb.Techforb.service.AuthenticationService;
-import com.Techforb.Techforb.service.UserService;
-import io.jsonwebtoken.io.IOException;
+import com.techforb.Techforb.config.security.jwt.JwtAuthenticationFilter;
+import com.techforb.Techforb.dto.request.LoginRequest;
+import com.techforb.Techforb.dto.request.SignUpRequest;
+import com.techforb.Techforb.dto.request.UserRequestDTO;
+import com.techforb.Techforb.dto.response.JwtAuthenticationResponse;
+import com.techforb.Techforb.dto.response.UserResponseDTO;
+import com.techforb.Techforb.service.AuthenticationService;
+import com.techforb.Techforb.service.UserService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,8 +33,6 @@ public class UserController {
     @Autowired
     private JwtAuthenticationFilter jwtFilter;
 
-    @Autowired
-    private IAWSClientService iawsClientService;
 
     @PostMapping("/signup")
     public JwtAuthenticationResponse signup(@Valid @RequestBody SignUpRequest request) {
@@ -63,22 +58,6 @@ public class UserController {
     public ResponseEntity<UserResponseDTO> getUserByEmail(@PathVariable @PositiveOrZero String email){
         return userService.getUserByEmail(email);
     }
-
-    @PostMapping("/upload/{email}")
-    public ResponseEntity<String> uploadProfilePhoto(@PathVariable String email,
-                                                     @RequestParam("file") MultipartFile file) {
-        try {
-            iawsClientService.uploadFile(file);
-            userService.uploadProfilePhoto(email,file);
-            return ResponseEntity.ok("Imagen subida con éxito");
-        } catch (IOException e) {
-            e.printStackTrace();
-            return ResponseEntity.badRequest().body("Error al subir la imagen");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
 
 
     @PutMapping("user/update/{id}")

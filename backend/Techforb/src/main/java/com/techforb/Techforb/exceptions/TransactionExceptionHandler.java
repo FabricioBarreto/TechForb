@@ -1,6 +1,6 @@
-package com.Techforb.Techforb.exceptions;
+package com.techforb.Techforb.exceptions;
 
-import com.Techforb.Techforb.dto.response.ErrorResponse;
+import com.techforb.Techforb.dto.response.ErrorResponse;
 import org.hibernate.TransactionException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

@@ -1,4 +1,4 @@
-package com.Techforb.Techforb.utils;
+package com.techforb.Techforb.utils;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

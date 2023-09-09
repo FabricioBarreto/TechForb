@@ -1,6 +1,6 @@
-package com.Techforb.Techforb.dto.request;
+package com.techforb.Techforb.dto.request;
 
-import com.Techforb.Techforb.models.TypeDocumentEnum;
+import com.techforb.Techforb.models.TypeDocumentEnum;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SignUpRequest {
+
         @NotBlank
         @Size(min = 2, max = 60)
         private String fullname;

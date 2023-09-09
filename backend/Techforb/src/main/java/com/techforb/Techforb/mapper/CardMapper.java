@@ -1,7 +1,7 @@
-package com.Techforb.Techforb.mapper;
+package com.techforb.Techforb.mapper;
 
-import com.Techforb.Techforb.dto.response.CardResponse;
-import com.Techforb.Techforb.models.Card;
+import com.techforb.Techforb.dto.response.CardResponse;
+import com.techforb.Techforb.models.Card;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

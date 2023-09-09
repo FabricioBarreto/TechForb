@@ -1,4 +1,4 @@
-package com.Techforb.Techforb.dto.response;
+package com.techforb.Techforb.dto.response;
 
 import lombok.Data;
 

@@ -1,9 +1,7 @@
-package com.Techforb.Techforb.controller;
+package com.techforb.Techforb.controller;
 
-
-
-import com.Techforb.Techforb.dto.response.MenuResponse;
-import com.Techforb.Techforb.service.MenuService;
+import com.techforb.Techforb.dto.response.MenuResponse;
+import com.techforb.Techforb.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

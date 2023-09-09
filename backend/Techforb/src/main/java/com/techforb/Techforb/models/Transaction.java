@@ -1,4 +1,4 @@
-package com.Techforb.Techforb.models;
+package com.techforb.Techforb.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

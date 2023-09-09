@@ -1,4 +1,4 @@
-package com.Techforb.Techforb.exceptions;
+package com.techforb.Techforb.exceptions;
 
 public class InvalidTokenException extends RuntimeException {
 

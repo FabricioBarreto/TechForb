@@ -1,6 +1,6 @@
-package com.Techforb.Techforb.service;
+package com.techforb.Techforb.service;
 
-import com.Techforb.Techforb.dto.response.MenuResponse;
+import com.techforb.Techforb.dto.response.MenuResponse;
 
 import java.util.List;
 

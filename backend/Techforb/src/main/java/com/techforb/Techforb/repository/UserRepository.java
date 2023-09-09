@@ -1,6 +1,6 @@
-package com.Techforb.Techforb.repository;
+package com.techforb.Techforb.repository;
 
-import com.Techforb.Techforb.models.User;
+import com.techforb.Techforb.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

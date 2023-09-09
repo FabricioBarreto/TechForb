@@ -1,6 +1,6 @@
-package com.Techforb.Techforb.dto.response;
+package com.techforb.Techforb.dto.response;
 
-import com.Techforb.Techforb.models.TypeDocumentEnum;
+import com.techforb.Techforb.models.TypeDocumentEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,6 @@
-package com.Techforb.Techforb.dto.request;
+package com.techforb.Techforb.dto.request;
 
-import com.Techforb.Techforb.models.TypeDocumentEnum;
+import com.techforb.Techforb.models.TypeDocumentEnum;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

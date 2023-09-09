@@ -1,8 +1,8 @@
-package com.Techforb.Techforb.mapper;
+package com.techforb.Techforb.mapper;
 
-import com.Techforb.Techforb.dto.request.UserRequestDTO;
-import com.Techforb.Techforb.dto.response.UserResponseDTO;
-import com.Techforb.Techforb.models.User;
+import com.techforb.Techforb.dto.request.UserRequestDTO;
+import com.techforb.Techforb.dto.response.UserResponseDTO;
+import com.techforb.Techforb.models.User;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,6 @@
-package com.Techforb.Techforb.repository;
+package com.techforb.Techforb.repository;
 
-import com.Techforb.Techforb.models.Card;
+import com.techforb.Techforb.models.Card;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

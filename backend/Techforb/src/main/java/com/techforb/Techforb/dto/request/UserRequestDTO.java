@@ -1,10 +1,11 @@
-package com.Techforb.Techforb.dto.request;
+package com.techforb.Techforb.dto.request;
 
-import com.Techforb.Techforb.models.TypeDocumentEnum;
+import com.techforb.Techforb.models.TypeDocumentEnum;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 @Data
 @AllArgsConstructor(staticName = "build")

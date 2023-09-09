@@ -2,7 +2,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import useAuthHeader from "@/app/hooks/useAuthHeader";
-import ButtonMenu from "@/app/components/ButtonMenu/ButtonMenu";
+import ButtonMenu from "@/app/components/Dashboard/SideMenu/ButtonMenu/ButtonMenu";
 import style from "./sideMenu.module.css";
 
 export default function SideMenu() {

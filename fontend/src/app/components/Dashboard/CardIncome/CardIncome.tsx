@@ -12,23 +12,23 @@ export default function CardIncome() {
 
   const token = localStorage.getItem("token");
 
-  const handleUpload = () => {
-    if (token) {
-      const decodedToken = jwt.decode(token);
-      const userEmail = decodedToken ? decodedToken.sub : null;
-      axios
-        .get(`http://localhost:8080/api/card/incomes${userEmail}`)
-        .then((res) => {
-          setCard(res.data);
-        });
-    }
-  };
+  // const handleUpload = () => {
+  //   if (token) {
+  //     const decodedToken = jwt.decode(token);
+  //     const userEmail = decodedToken ? decodedToken.sub : null;
+  //     axios
+  //       .get(`http://localhost:8080/api/card/incomes${userEmail}`)
+  //       .then((res) => {
+  //         setCard(res.data);
+  //       });
+  //   }
+  // };
 
-  useEffect(() => {
-    if (token) {
-      handleUpload();
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (token) {
+  //     handleUpload();
+  //   }
+  // }, []);
 
   return (
     <div className={style.card}>

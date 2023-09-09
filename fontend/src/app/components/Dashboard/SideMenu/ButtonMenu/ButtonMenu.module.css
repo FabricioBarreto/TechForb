@@ -1,13 +1,11 @@
-/* Estilos para los enlaces en el sidebar */
 .sidebarA {
   border-radius: 15px;
   padding: 1rem;
   display: block;
   text-transform: capitalize;
   text-decoration: none;
-  color: #fff; /* Color del texto de los enlaces */
-  font-size: 16px;
-  transition: padding-left 0.3s ease; /* Efecto de transición para el texto al expandir/retraer */
+  color: #fff;
+  font-size: 20px;
 }
 
 .sidebarA:hover {

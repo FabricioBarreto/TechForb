@@ -10,9 +10,8 @@ import style from "./Header.module.css";
 
 export default function Header() {
   useAuthHeader();
-  
-  let token:any;
 
+  let token: any;
 
   const handleUpload = () => {
     if (token) {
@@ -23,7 +22,6 @@ export default function Header() {
       });
     }
   };
-
 
   if (typeof window !== "undefined") {
     token = localStorage.getItem("token");
@@ -49,6 +47,13 @@ export default function Header() {
     dateOfExp: "",
   });
 
+  const showClass = () => {
+    let sidebar = document.getElementById("sidebar");
+    if (sidebar) {
+      sidebar.classList.add("sideMenu_toggleSidebar__WFXU8");
+    }
+  };
+
   return (
     <header className="bg-transparent p-6 flex row-auto justify-between items-center text-center absolute top-0 right-0 w-full min-w-450">
       <Bars3BottomLeftIcon
@@ -57,7 +62,8 @@ export default function Header() {
           " " +
           "text-cyan-50 relative cursor-pointer min-w-500"
         }
-        id="btnSidebar"
+        id="btnToggle"
+        onClick={showClass}
       ></Bars3BottomLeftIcon>
       <div className={style.searcher}>
         <input

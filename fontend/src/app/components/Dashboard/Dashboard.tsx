@@ -11,9 +11,11 @@ export default function Dashboard() {
     <div className={style.dashboard + " " + "flex min-w-450"}>
       <Header />
       <SideMenu />
-      <Card />
-      <CardIncome />
-      <CardEgreso />
+      <section >
+        <Card />
+        <CardIncome />
+        <CardEgreso />
+      </section>
     </div>
   );
 }

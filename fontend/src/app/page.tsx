@@ -7,24 +7,20 @@ export default function Home() {
   useAuthHeader();
   useAuth();
 
-  // const hidenSidebar = (e) => {
-  //   if (e.target.id == "btnSidebar") {
-  //     e.target.classList.add("sideMenu_toggleSidebar__WFXU8");
-  //   } else {
-  //     if (document.getElementById("btnSidebar").classList.contains("fsd"))
-  //       document
-  //         .getElementById("sidebar")
-  //         .classList.remove("sideMenu_toggleSidebar__WFXU8");
-  //     document
-  //       .getElementById("sidebar")
-  //       .classList.remove("sideMenu_toggleSidebar__WFXU8");
-  //   }
-  // };
+  const hidenSidebar = (e: any) => {
+    if (e.target.id === "btnToggle") {
+      return null;
+    }
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar) {
+      sidebar.classList.remove("sideMenu_toggleSidebar__WFXU8");
+    }
+  };
 
   return (
     <main
       className="flex min-h-screen flex-col items-center justify-between p-24"
-      // onClick={hidenSidebar}
+      onClick={hidenSidebar}
     >
       <Dashboard />
     </main>

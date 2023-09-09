@@ -17,19 +17,15 @@ export default function SideMenu() {
   }, []);
 
   return (
-    <div className={style.sidebar + " " + style.toggleSidebar} id="sidebar">
-      <div className="flex flex-col justify-between">
-        <h1 className="text-2xl font-semibold m-auto mt-3 mb-10">LOGO</h1>
-        <ul className="mt-4">
-          {menu.map((item: any) => (
-            <li key={item.name} className={"mb-2"}>
-              <div>
-                <ButtonMenu nameItem={item.name} urlItem={item.url} />
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className={style.sidebar} id="sidebar">
+      <h1 className={style.brand}>LOGO</h1>
+      <ul>
+        {menu.map((item: any) => (
+          <li key={item.name} className={style.sidebarLi}>
+            <ButtonMenu nameItem={item.name} urlItem={item.url} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
